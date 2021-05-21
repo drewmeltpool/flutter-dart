@@ -12,12 +12,7 @@ class Student {
   int get age => (DateTime.now().year - birthYear);
   set age(int val) => birthYear = (DateTime.now().year - val);
 
-  Student(String firstName, String lastName, int birthYear, String group) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.birthYear = birthYear;
-    this.group = group;
-  }
+  Student(this.firstName, this.lastName, this.birthYear, this.group);
 
   String printInfo() => 'Student: $firstName $lastName $age age, group: $group';
 }
