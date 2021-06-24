@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram_app/Page/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,25 +8,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Instagram',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData.dark(),
       home: HomePage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Instagram'),
-      ),
-      body: Container(
-          child: Text('Some text', style: TextStyle(
-            fontFamily: 'Pacifico',
-            fontSize: 32.0,
-          )),
-      ),
-    );
-  }
-}
+
