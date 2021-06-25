@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Panel extends StatelessWidget {
-  double iconSize = 30;
+  final double iconSize = 30;
 
   @override
   Widget build(BuildContext context) {

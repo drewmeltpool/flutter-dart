@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'NewsItem.dart';
+import 'GoodItem.dart';
 
-class Posts extends StatelessWidget {
+class GoodList extends StatelessWidget {
   final List<String> imagePaths;
-  
-
-  Posts({this.imagePaths});
+  final Function func;
+  GoodList({this.imagePaths, this.func});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: (this.imagePaths.length * 330).toDouble(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: this
             .imagePaths
-            .map((e) => Post(
-          imagePath: e,
+            .map((e) => GoodItem(
+          image: e,
+          func: this.func,
         ))
             .toList(),
       ),
